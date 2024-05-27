@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 basedir = "data/nyu/scared"
-limit_rate=0.05
+limit_rate=0.2
 ### data/nyu/scared/dataset_{i}/keyframe_{i}/data/left/000000.png
 
 allFields = []
