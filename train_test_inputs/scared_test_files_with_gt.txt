@@ -1,13 +1,3 @@
-/scared/dataset_3/keyframe_2/data/left//001107.png /scared/dataset_3/keyframe_2/data/depthmap//001107.png 1035.308
-/scared/dataset_3/keyframe_4/data/left//000694.png /scared/dataset_3/keyframe_4/data/depthmap//000694.png 1035.308
-/scared/dataset_7/keyframe_3/data/left//000368.png /scared/dataset_7/keyframe_3/data/depthmap//000368.png 1035.308
-/scared/dataset_7/keyframe_2/data/left//000135.png /scared/dataset_7/keyframe_2/data/depthmap//000135.png 1035.308
-/scared/dataset_4/keyframe_3/data/left//000343.png /scared/dataset_4/keyframe_3/data/depthmap//000343.png 1035.308
-/scared/dataset_6/keyframe_2/data/left//000087.png /scared/dataset_6/keyframe_2/data/depthmap//000087.png 1035.308
-/scared/dataset_2/keyframe_2/data/left//000219.png /scared/dataset_2/keyframe_2/data/depthmap//000219.png 1035.308
-/scared/dataset_4/keyframe_1/data/left//000014.png /scared/dataset_4/keyframe_1/data/depthmap//000014.png 1035.308
-/scared/dataset_7/keyframe_3/data/left//000330.png /scared/dataset_7/keyframe_3/data/depthmap//000330.png 1035.308
-/scared/dataset_2/keyframe_4/data/left//001281.png /scared/dataset_2/keyframe_4/data/depthmap//001281.png 1035.308
 /scared/dataset_3/keyframe_3/data/left//000371.png /scared/dataset_3/keyframe_3/data/depthmap//000371.png 1035.308
 /scared/dataset_7/keyframe_4/data/left//000133.png /scared/dataset_7/keyframe_4/data/depthmap//000133.png 1035.308
 /scared/dataset_1/keyframe_3/data/left//000441.png /scared/dataset_1/keyframe_3/data/depthmap//000441.png 1035.308

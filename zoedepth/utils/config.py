@@ -248,7 +248,7 @@ COMMON_TRAINING_CONFIG = {
     "translate_prob": 0.2,
     "max_translation": 100,
 
-    "validate_every": 0.001,
+    "validate_every": 0.25,
     "log_images_every": 0.1,
     "prefetch": False,
 }
