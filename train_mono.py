@@ -1,4 +1,5 @@
 # MIT License
+import wandb
 
 # Copyright (c) 2022 Intelligent Systems Lab Org
 
@@ -38,7 +39,7 @@ import os
 
 os.environ["PYOPENGL_PLATFORM"] = "egl"
 os.environ["WANDB_START_METHOD"] = "thread"
-
+wandb.login("3a811e08aa32046637b0161ebad59387771a9d14")
 
 def fix_random_seed(seed: int):
     import random
