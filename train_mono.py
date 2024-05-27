@@ -113,6 +113,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--model", type=str, default="zoedepth")
     parser.add_argument("-d", "--dataset", type=str, default='nyu')
+    parser.add_argument("-bs", "--batch_size", type=int, default=1)
     parser.add_argument("--trainer", type=str, default=None)
     ##--pretrained_resource="local::D:\otherPj\ZoeDepth\notebooks\ZoeD_M12_N.pt"
     # parser.add_argument("--pretrained_resource", type=str, default=r"local::D:\otherPj\ZoeDepth\notebooks\ZoeD_M12_N.pt")
