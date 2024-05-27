@@ -39,7 +39,6 @@ import os
 
 os.environ["PYOPENGL_PLATFORM"] = "egl"
 os.environ["WANDB_START_METHOD"] = "thread"
-wandb.login("3a811e08aa32046637b0161ebad59387771a9d14")
 
 def fix_random_seed(seed: int):
     import random
@@ -134,7 +133,7 @@ if __name__ == '__main__':
         shared_dict = None
     config.shared_dict = shared_dict
 
-    config.batch_size = config.bs
+    config.batch_size = args.batch_size
     config.mode = 'train'
     if config.root != "." and not os.path.isdir(config.root):
         os.makedirs(config.root)
