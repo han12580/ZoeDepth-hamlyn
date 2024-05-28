@@ -115,6 +115,7 @@ if __name__ == '__main__':
     parser.add_argument("-d", "--dataset", type=str, default='nyu')
     parser.add_argument("-bs", "--batch_size", type=int, default=1)
     parser.add_argument("--trainer", type=str, default=None)
+    parser.add_argument("-ve","--validate_every", type=float, default=0.25)
     ##--pretrained_resource="local::D:\otherPj\ZoeDepth\notebooks\ZoeD_M12_N.pt"
     # parser.add_argument("--pretrained_resource", type=str, default=r"local::D:\otherPj\ZoeDepth\notebooks\ZoeD_M12_N.pt")
 
@@ -134,6 +135,7 @@ if __name__ == '__main__':
     config.shared_dict = shared_dict
 
     config.batch_size = args.batch_size
+    config.validate_every=args.validate_every
     config.mode = 'train'
     if config.root != "." and not os.path.isdir(config.root):
         os.makedirs(config.root)
