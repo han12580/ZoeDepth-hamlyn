@@ -134,10 +134,10 @@ def eval_model(model_name, pretrained_resource, dataset='nyu', **kwargs):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-m", "--model", type=str,
-                        required=True, help="Name of the model to evaluate")
+    parser.add_argument("-m", "--model", type=str,default="zoedepth",
+                        required=False, help="Name of the model to evaluate")
     parser.add_argument("-p", "--pretrained_resource", type=str,
-                        required=False, default=None, help="Pretrained resource to use for fetching weights. If not set, default resource from model config is used,  Refer models.model_io.load_state_from_resource for more details.")
+                        required=False, default="local::depth_anything_finetune/ZoeDepthv1_27-May_15-34-30df7b0c3128_latest.pt", help="Pretrained resource to use for fetching weights. If not set, default resource from model config is used,  Refer models.model_io.load_state_from_resource for more details.")
     parser.add_argument("-d", "--dataset", type=str, required=False,
                         default='nyu', help="Dataset to evaluate on")
 

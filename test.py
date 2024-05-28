@@ -19,7 +19,10 @@ for dataset in os.listdir(basedir):
             imgpath=frame_dir+"/"+depthpath
             depth=Image.open(depth_path)
             depth=np.array(depth)
-            size=depth[depth!=0].size
+            resize_Depth=depth/6528.0
+            mask = np.logical_and(
+                resize_Depth >=0.001, resize_Depth <= 10).squeeze()[...]
+            size=resize_Depth[mask].size
             if(size<depth.size*limit_rate):
                 print(depth_dir,depthpath, "is empty")
                 continue

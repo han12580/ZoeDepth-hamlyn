@@ -162,7 +162,7 @@ class DepthDataLoader(object):
             else:
                 self.eval_sampler = None
             self.data = DataLoader(self.testing_samples, 1,
-                                   shuffle=kwargs.get("shuffle_test", False),
+                                   shuffle=False,
                                    num_workers=1,
                                    pin_memory=False,
                                    sampler=self.eval_sampler)
