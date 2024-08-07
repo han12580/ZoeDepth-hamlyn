@@ -22,7 +22,7 @@ train_files = read_lines(trainfilePath)
 test_files = read_lines(testfilePath)
 
 # Determine the number of files to move between train and test sets
-num_train_to_val = int(0.25 * len(train_files))
+num_train_to_val = int(0.2 * len(train_files))
 num_val_to_train = int(0.50 * len(test_files))
 
 # Shuffle files to ensure randomness
