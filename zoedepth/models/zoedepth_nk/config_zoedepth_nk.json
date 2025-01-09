@@ -41,7 +41,7 @@
         "same_lr": false,
         "w_si": 1,
         "w_domain": 100,
-        "avoid_boundary": false,
+        "avoid_boundary": true,
         "random_crop": false,
         "input_width": 640,
         "input_height": 480,

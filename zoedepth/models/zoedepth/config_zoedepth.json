@@ -32,7 +32,7 @@
         "w_domain": 0.2,
         "w_reg": 0,
         "w_grad": 0,
-        "avoid_boundary": false,
+        "avoid_boundary": true,
         "random_crop": false,
         "input_width": 640,
         "input_height": 480,

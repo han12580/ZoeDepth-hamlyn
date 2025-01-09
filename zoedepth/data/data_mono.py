@@ -326,7 +326,7 @@ class DataLoadPreprocess(Dataset):
                 # print("Avoiding Blank Boundaries!")
                 # We just crop and pad again with reflect padding to original size
                 # original_size = image.size
-                crop_params = get_white_border(np.array(image, dtype=np.uint8))
+                crop_params = get_black_border(np.array(image, dtype=np.uint8))
                 image = image.crop((crop_params.left, crop_params.top, crop_params.right, crop_params.bottom))
                 depth_gt = depth_gt.crop((crop_params.left, crop_params.top, crop_params.right, crop_params.bottom))
 
@@ -351,7 +351,7 @@ class DataLoadPreprocess(Dataset):
             depth_gt = np.expand_dims(depth_gt, axis=2)
 
             if self.config.dataset == 'nyu':
-                depth_gt = depth_gt / 6528.0
+                depth_gt = depth_gt / 256.0
             else:
                 depth_gt = depth_gt / 256.0
 
@@ -396,7 +396,7 @@ class DataLoadPreprocess(Dataset):
                     depth_gt = np.asarray(depth_gt, dtype=np.float32)
                     depth_gt = np.expand_dims(depth_gt, axis=2)
                     if self.config.dataset == 'nyu':
-                        depth_gt = depth_gt / 6528.0
+                        depth_gt = depth_gt / 256.0
                     else:
                         depth_gt = depth_gt / 256.0
 

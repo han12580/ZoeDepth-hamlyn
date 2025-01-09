@@ -33,7 +33,7 @@ import platform
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve()
 
-HOME_DIR = os.path.expanduser("/kaggle/input/scareddataset")
+HOME_DIR = os.path.expanduser("/home/han/han/hy")
 
 COMMON_CONFIG = {
     "save_dir": os.path.expanduser("./depth_anything_finetune"),
@@ -95,17 +95,17 @@ DATASETS_CONFIG = {
     },
     "nyu": {
         "dataset": "nyu",
-        "avoid_boundary": False,
+        "avoid_boundary": True,
         "min_depth": 1e-3,  # originally 0.1
         "max_depth": 10,
         "data_path": os.path.join(HOME_DIR),
         "gt_path": os.path.join(HOME_DIR),
-        "filenames_file": "./train_test_inputs/scared_train_files_with_gt.txt",
+        "filenames_file": "./train_test_inputs/hamlyn_train_files_with_gt.txt",
         "input_height": 480,
         "input_width": 640,
         "data_path_eval": os.path.join(HOME_DIR),
         "gt_path_eval": os.path.join(HOME_DIR),
-        "filenames_file_eval": "./train_test_inputs/scared_test_files_with_gt.txt",
+        "filenames_file_eval": "./train_test_inputs/hamlyn_train_files_with_gt.txt",
         "min_depth_eval": 1e-3,
         "max_depth_eval": 10,
         "min_depth_diff": -10,
