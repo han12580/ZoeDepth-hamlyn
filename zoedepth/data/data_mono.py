@@ -336,6 +336,8 @@ class DataLoadPreprocess(Dataset):
                 image = Image.fromarray(image)
 
                 depth_gt = np.array(depth_gt)
+                if depth_gt.ndim == 3:
+                    depth_gt = depth_gt[:, :, 0]
                 depth_gt = np.pad(depth_gt, ((crop_params.top, h - crop_params.bottom), (crop_params.left, w - crop_params.right)), 'constant', constant_values=0)
                 depth_gt = Image.fromarray(depth_gt)
 
@@ -348,7 +350,11 @@ class DataLoadPreprocess(Dataset):
 
             image = np.asarray(image, dtype=np.float32) / 255.0
             depth_gt = np.asarray(depth_gt, dtype=np.float32)
+            if depth_gt.ndim == 3:
+                depth_gt = depth_gt[:, :, 0]
             depth_gt = np.expand_dims(depth_gt, axis=2)
+
+
 
             if self.config.dataset == 'nyu':
                 depth_gt = depth_gt / 256.0
@@ -366,6 +372,7 @@ class DataLoadPreprocess(Dataset):
             image, depth_gt = self.train_preprocess(image, depth_gt)
             mask = np.logical_and(depth_gt > self.config.min_depth,
                                   depth_gt < self.config.max_depth).squeeze()[None, ...]
+
             sample = {'image': image, 'depth': depth_gt, 'focal': focal,
                       'mask': mask, **sample}
 
@@ -541,9 +548,9 @@ class ToTensor(object):
                     'image_path': sample['image_path'], 'depth_path': sample['depth_path']}
 
     def to_tensor(self, pic):
-        if not (_is_pil_image(pic) or _is_numpy_image(pic)):
-            raise TypeError(
-                'pic should be PIL Image or ndarray. Got {}'.format(type(pic)))
+        # if not (_is_pil_image(pic) or _is_numpy_image(pic)):
+        #     raise TypeError(
+        #         'pic should be PIL Image or ndarray. Got {}'.format(type(pic)))
 
         if isinstance(pic, np.ndarray):
             img = torch.from_numpy(pic.transpose((2, 0, 1)))
