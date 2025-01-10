@@ -33,7 +33,7 @@ import platform
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve()
 
-HOME_DIR = os.path.expanduser("/home/han/han/hy")
+HOME_DIR = os.path.expanduser("/kaggle/input/hamlyn-dataset")
 
 COMMON_CONFIG = {
     "save_dir": os.path.expanduser("./depth_anything_finetune"),
