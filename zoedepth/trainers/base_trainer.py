@@ -233,6 +233,8 @@ class BaseTrainer:
 
                 # print(f"Finished step {self.step} on device {self.config.rank}")
                 #################################################################################################
+            self.save_checkpoint(
+                f"{self.config.experiment_id}_latest.pt")
 
         # Save / validate at the end
         self.step += 1  # log as final point
